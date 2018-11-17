@@ -13,17 +13,27 @@
       "--socket=pulseaudio",
       "--filesystem=xdg-videos",
       "--filesystem=xdg-download",
+      "--filesystem=xdg-pictures",
       "--env=LC_NUMERIC=C"
   ],
   "modules": [
     {
       "name": "moonplayer",
       "buildsystem": "qmake",
+      "post-install": [
+        "mv /app/bin/moonplayer /app/bin/moonplayer-run",
+        "install -m755 moonplayer-script /app/bin/moonplayer"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.1.5.tar.gz",
-          "sha256": "42e8d6f65b32a0863a6727439da5526d9a3652743873872ed881e644d9584a7e"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.2.tar.gz",
+          "sha256": "e71bf88168ed7f9dc6f566d613a69f87375d1d2bd52724528a4a24c5bdef5a7e"
+        },
+        {
+          "type": "script",
+          "dest-filename": "src/moonplayer-script",
+          "commands": ["exec env TMPDIR=$XDG_CACHE_HOME /app/bin/moonplayer-run \"$@\""]
         }
       ],
       "subdir": "src",
