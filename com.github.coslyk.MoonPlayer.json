@@ -3,6 +3,8 @@
   "runtime": "org.kde.Platform",
   "runtime-version": "5.11",
   "sdk": "org.kde.Sdk",
+  "base": "io.qt.qtwebkit.BaseApp",
+  "base-version": "5.11",
   "command": "moonplayer",
   "finish-args": [
       "--share=ipc",
@@ -20,6 +22,11 @@
     {
       "name": "moonplayer",
       "buildsystem": "qmake",
+      "build-options":{
+        "env":{
+          "QMAKEPATH": "/app/lib"
+        }
+      },
       "post-install": [
         "mv /app/bin/moonplayer /app/bin/moonplayer-run",
         "install -m755 moonplayer-script /app/bin/moonplayer"
@@ -27,8 +34,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.2.tar.gz",
-          "sha256": "e71bf88168ed7f9dc6f566d613a69f87375d1d2bd52724528a4a24c5bdef5a7e"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.3.tar.gz",
+          "sha256": "9e26dc6405edaffec6c9f5bf66d18cb576692e52653c033465765254ca59d125"
         },
         {
           "type": "script",
@@ -95,11 +102,11 @@
             {
               "name": "libv4l2",
               "cleanup": [ "/include", "/lib/*.la", "/lib/*/*.la", "/lib*/*/*/*.la", "/lib/pkgconfig", "/share/man" ],
-              "config-opts": [ "--disable-static", "--disable-qv4l2", "--disable-qvidcap" ],
+              "config-opts": [ "--disable-static", "--disable-qv4l2", "--disable-qvidcap", "--disable-bpf" ],
               "sources": [{
                 "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.0.tar.bz2",
-                "sha256": "f1b425584284bac378b76331c0671dc890bd7af49c03e8a6cc0c70e57eea0bad"
+                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.2.tar.bz2",
+                "sha256": "6c3208c9a1c73455d30bae83096d161e57bec5008594f270a2a67df8c86d8e47"
               }]
             },
             {
@@ -134,8 +141,8 @@
                 "cleanup": [ "/bin", "/include", "/lib/pkgconfig", "/lib/*.la", "/share/man" ],
                 "sources": [{
                   "type": "archive",
-                  "url": "https://dl.tingping.se/mirror/fribidi-0.19.7.tar.bz2",
-                  "sha256": "08222a6212bbc2276a2d55c3bf370109ae4a35b689acbc66571ad2a670595a8e"
+                  "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2",
+                  "sha256": "6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce"
                 }]
               }]
             },
@@ -158,17 +165,6 @@
                   "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz",
                   "sha256": "8351328cdfbcb2432e63938721dd781eb8c11ebc56e3a89d0f84576b96002c61"
                 }
-              ]
-            },
-            {
-              "name": "wayland-protocols",
-              "cleanup": [ "*" ],
-              "sources": [
-                   {
-                       "type": "archive",
-                       "url": "https://wayland.freedesktop.org/releases/wayland-protocols-1.14.tar.xz",
-                       "sha256": "9648896b2462b49b15a69b60f44656593c170c0e73121c890eb16d0c1d9376f6"
-                   }
               ]
             }
           ]
