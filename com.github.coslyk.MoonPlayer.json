@@ -34,8 +34,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.3.tar.gz",
-          "sha256": "9e26dc6405edaffec6c9f5bf66d18cb576692e52653c033465765254ca59d125"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.4.tar.gz",
+          "sha256": "8a8c2d88776f7aab214cbc01382be1fca501d7ad5dbc907d38ced638f6db8ca0"
         },
         {
           "type": "script",
