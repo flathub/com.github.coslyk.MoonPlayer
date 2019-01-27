@@ -1,10 +1,8 @@
 {
   "app-id": "com.github.coslyk.MoonPlayer",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.11",
+  "runtime-version": "5.12",
   "sdk": "org.kde.Sdk",
-  "base": "io.qt.qtwebkit.BaseApp",
-  "base-version": "5.11",
   "command": "moonplayer",
   "finish-args": [
       "--share=ipc",
@@ -22,11 +20,6 @@
     {
       "name": "moonplayer",
       "buildsystem": "qmake",
-      "build-options":{
-        "env":{
-          "QMAKEPATH": "/app/lib"
-        }
-      },
       "post-install": [
         "mv /app/bin/moonplayer /app/bin/moonplayer-run",
         "install -m755 moonplayer-script /app/bin/moonplayer"
@@ -34,8 +27,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.4.tar.gz",
-          "sha256": "8a8c2d88776f7aab214cbc01382be1fca501d7ad5dbc907d38ced638f6db8ca0"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.5.tar.gz",
+          "sha256": "08f746268035d615c82cd173b18569b0b9b9f7d3f0ed99702cfed4097b3d6756"
         },
         {
           "type": "script",
