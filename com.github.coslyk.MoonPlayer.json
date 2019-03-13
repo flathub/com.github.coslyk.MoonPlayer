@@ -27,8 +27,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.5.5.tar.gz",
-          "sha256": "937768a34a0454dab25668031c0b3105e747791e2d7d1f8c6c90865b5f33c02c"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.6.tar.gz",
+          "sha256": "e149455c89fe0b94020ec0df3bae6a9ed9eeb58a14340cc658ddd97561294e90"
         },
         {
           "type": "script",
@@ -38,35 +38,6 @@
       ],
       "subdir": "src",
       "modules": [
-        {
-          "name": "qtermwidget",
-          "cleanup": [ "/include", "/lib/pkgconfig", "/lib/cmake" ],
-          "buildsystem": "cmake-ninja",
-          "builddir": true,
-          "config-opts": [ "-DPULL_TRANSLATIONS=No" ],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://github.com/lxqt/qtermwidget/archive/0.14.0.tar.gz",
-              "sha256": "1f63a74d436c0226d44581cc0e9eaf24bb21fdf0f60a33352b771f89dd76d17c"
-            }
-          ],
-          "modules": [
-            {
-              "name": "lxqt-build-tools",
-              "cleanup": [ "*" ],
-              "buildsystem": "cmake-ninja",
-              "builddir": true,
-              "sources": [
-                {
-                  "type": "archive",
-                  "url": "https://github.com/lxqt/lxqt-build-tools/archive/0.6.0.tar.gz",
-                  "sha256": "b993597738111ce58c161a962dc1c13ce24cdcde21301cfaaff29ba540c27418"
-                }
-              ]
-            }
-          ]
-        },
         {
           "name": "libmpv",
           "cleanup": [ "/include", "/lib/pkgconfig" ],
