@@ -27,8 +27,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.6.tar.gz",
-          "sha256": "e149455c89fe0b94020ec0df3bae6a9ed9eeb58a14340cc658ddd97561294e90"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.7.tar.gz",
+          "sha256": "c2d6660c601cdcd8ec9c9162d59729b57a6dc88b3225e5349bc4ce2451665429"
         },
         {
           "type": "script",
@@ -38,18 +38,6 @@
       ],
       "subdir": "src",
       "modules": [
-        {
-          "name": "qtwebengine-runjs",
-          "buildsystem": "qmake",
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://github.com/coslyk/qtwebengine-runjs/archive/0.1.tar.gz",
-              "sha256": "6c9d0dd89c9791de1f18d768ea2ac9152bce2c752744b08ce58e071ff57b7046"
-            }
-          ],
-          "post-install": ["mv /app/bin/qtwebengine-runjs /app/bin/jsc"]
-        },
         {
           "name": "libmpv",
           "cleanup": [ "/include", "/lib/pkgconfig" ],
@@ -98,8 +86,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.1.tar.xz",
-                "sha256": "a38ec4d026efb58506a99ad5cd23d5a9793b4bf415f2c4c2e9c1bb444acd1994"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.1.3.tar.xz",
+                "sha256": "0c3020452880581a8face91595b239198078645e7d7184273b8bcc7758beb63d"
               }]
             },
             {
