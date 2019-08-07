@@ -1,0 +1,14 @@
+{
+    "name": "python3-PySocks",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PySocks"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/cd/18/102cc70347486e75235a29a6543f002cf758042189cb063ec25334993e36/PySocks-1.7.0-py3-none-any.whl",
+            "sha256": "15d38914b60dbcb231d276f64882a20435c049450160e953ca7d313d1405f16f"
+        }
+    ]
+}
