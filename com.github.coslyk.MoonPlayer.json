@@ -27,8 +27,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.8.tar.gz",
-          "sha256": "27b6c572604d62d656f70757197ef82f558eae473c37617dd35e43b1214e7b0c"
+          "url": "https://github.com/coslyk/moonplayer/archive/2.9.tar.gz",
+          "sha256": "fe7309c9aace6562e8d49d36a70da4f6c5686f8be96bb49537a98a6ff14d615e"
         },
         {
           "type": "script",
@@ -87,8 +87,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.tar.xz",
-                "sha256": "023f10831a97ad93d798f53a3640e55cd564abfeba807ecbe8524dac4fedecd5"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz",
+                "sha256": "cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
               }]
             },
             {
