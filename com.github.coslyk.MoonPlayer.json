@@ -27,8 +27,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.9.tar.gz",
-          "sha256": "fe7309c9aace6562e8d49d36a70da4f6c5686f8be96bb49537a98a6ff14d615e"
+          "url": "https://github.com/coslyk/moonplayer/archive/fix_appstream.tar.gz",
+          "sha256": "0d8330661c8936c0f88703c1d2c0bfa96c585b549ecab5a2ce30888a951abf7d"
         },
         {
           "type": "script",
