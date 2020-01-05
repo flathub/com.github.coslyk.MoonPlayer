@@ -1,7 +1,7 @@
 {
   "app-id": "com.github.coslyk.MoonPlayer",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.12",
+  "runtime-version": "5.13",
   "sdk": "org.kde.Sdk",
   "command": "moonplayer",
   "finish-args": [
@@ -19,7 +19,10 @@
   "modules": [
     {
       "name": "moonplayer",
-      "buildsystem": "qmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
       "post-install": [
         "mv /app/bin/moonplayer /app/bin/moonplayer-run",
         "install -m755 moonplayer-script /app/bin/moonplayer"
@@ -27,8 +30,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/2.9.2.tar.gz",
-          "sha256": "70c4235bb3f5c89ae270cf9844650cc140080448a056f631c5ecccb00ec1b134"
+          "url": "https://github.com/coslyk/moonplayer/archive/v3.0.tar.gz",
+          "sha256": "ca9d813a492cca73a57a9000b31dbb87f5d99d55432b20359ecb327285bcca60"
         },
         {
           "type": "script",
@@ -44,34 +47,46 @@
           "cleanup": [ "/include", "/lib/pkgconfig" ],
           "buildsystem": "simple",
           "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-oss-audio --disable-alsa --disable-lua --enable-tv",
+            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-oss-audio --disable-alsa --disable-lua",
             "python3 waf build",
             "python3 waf install"
           ],
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.29.1.tar.gz",
-              "sha256": "f9f9d461d1990f9728660b4ccb0e8cb5dce29ccaa6af567bec481b79291ca623"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.31.0.tar.gz",
+              "sha256": "805a3ac8cf51bfdea6087a6480c18835101da0355c8e469b6d488a1e290585a5"
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.18",
-              "sha256": "2e0cf83a63843da127610420cef1d3126f1187d8e572b6b3a28052fc2250d4bf",
+              "url": "https://waf.io/waf-2.0.19",
+              "sha256": "ba63c90a865a9bcf46926c4e6776f9a3f73d29f33d49b7f61f96bc37b7397cef",
               "dest-filename": "waf"
             }
           ],
           "modules": [
-            "shared-modules/udev/udev-175.json",
             {
               "name": "libv4l2",
               "cleanup": [ "/include", "/lib/*.la", "/lib/*/*.la", "/lib*/*/*/*.la", "/lib/pkgconfig", "/share/man" ],
               "config-opts": [ "--disable-static", "--disable-qv4l2", "--disable-qvidcap", "--disable-bpf" ],
               "sources": [{
                 "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.6.tar.bz2",
-                "sha256": "f9dac1878e3d5636eab7f56bb209fdfc66b94ee8a2aae54dcb4282fe63a678ae"
+                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.18.0.tar.bz2",
+                "sha256": "6cb60d822eeed20486a03cc23e0fc65956fbc1e85e0c1a7477f68bbd9802880d"
               }]
+            },
+            {
+              "name": "nv-codec-headers",
+              "cleanup": ["*"],
+              "no-autogen": true,
+              "make-install-args": ["PREFIX=/app"],
+              "sources": [
+                {
+                  "type": "git",
+                  "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+                  "commit": "cf8b0b2bb70b59068b06f1d5610627c8aa6d5652"
+                }
+              ]
             },
             {
               "name": "ffmpeg",
@@ -87,8 +102,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz",
-                "sha256": "cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz",
+                "sha256": "cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c"
               }]
             },
             {
@@ -99,15 +114,6 @@
                 "type": "archive",
                 "url": "https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz",
                 "sha256": "881f2382af48aead75b7a0e02e65d88c5ebd369fe46bc77d9270a94aa8fd38a2"
-              }],
-              "modules": [{
-                "name": "fribidi",
-                "cleanup": [ "/bin", "/include", "/lib/pkgconfig", "/lib/*.la", "/share/man" ],
-                "sources": [{
-                  "type": "archive",
-                  "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2",
-                  "sha256": "6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce"
-                }]
               }]
             },
             {

@@ -7,18 +7,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/51/b6/986c99a10040beaaefca1ad6c93bd7738cb8e4f52f6caed13d3ed1caa7e4/shellescape-3.4.1-py2.py3-none-any.whl",
-            "sha256": "3ff2aeb6ce2c5a4e6059fe4a2a745a824f5a3834fe8365a39c5ea691073cfdb6"
+            "url": "https://files.pythonhosted.org/packages/b9/63/df50cac98ea0d5b006c55a399c3bf1db9da7b5a24de7890bc9cfd5dd9e99/certifi-2019.11.28-py2.py3-none-any.whl",
+            "sha256": "017c25db2a153ce562900032d5bc68e9f191e44e9a0f762f373977de9df1fbb3"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/02/36/b8107b51adca73402ec1860d88f41d958e275e60eea6eeaa9c39ddb89a40/Naked-0.1.31-py2.py3-none-any.whl",
-            "sha256": "19de9961f4edb29e75cf837e8e031d6b52fbba4f0033515893d26f69c74b3b1f"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
-            "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
+            "url": "https://files.pythonhosted.org/packages/b4/40/a9837291310ee1ccc242ceb6ebfd9eb21539649f193a7c8c86ba15b98539/urllib3-1.25.7-py2.py3-none-any.whl",
+            "sha256": "a8a318824cc77d1fd4b2bec2ded92646630d7fe8619497b142c84a9e6f5a7293"
         },
         {
             "type": "file",
@@ -27,23 +22,28 @@
         },
         {
             "type": "file",
+            "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
+            "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/8d/c9/e5be955a117a1ac548cdd31e37e8fd7b02ce987f9655f5c7563c656d5dcb/PyYAML-5.2.tar.gz",
+            "sha256": "c0ee8eca2c582d29c3c2ec6e2c4f703d1b7f1fb10bc72317355a746057e7346c"
+        },
+        {
+            "type": "file",
             "url": "https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl",
             "sha256": "9cf5292fcd0f598c671cfc1e0d7d1a7f13bb8085e9a590f48c010551dc6c4b31"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/e6/60/247f23a7121ae632d62811ba7f273d0e58972d75e58a94d329d51550a47d/urllib3-1.25.3-py2.py3-none-any.whl",
-            "sha256": "b246607a25ac80bedac05c6f282e3cdaf3afb65420fd024ac94435cabe6e18d1"
+            "url": "https://files.pythonhosted.org/packages/51/b6/986c99a10040beaaefca1ad6c93bd7738cb8e4f52f6caed13d3ed1caa7e4/shellescape-3.4.1-py2.py3-none-any.whl",
+            "sha256": "3ff2aeb6ce2c5a4e6059fe4a2a745a824f5a3834fe8365a39c5ea691073cfdb6"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/e3/e8/b3212641ee2718d556df0f23f78de8303f068fe29cdaa7a91018849582fe/PyYAML-5.1.2.tar.gz",
-            "sha256": "01adf0b6c6f61bd11af6e10ca52b7d4057dd0be0343eb9283c878cf3af56aee4"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl",
-            "sha256": "046832c04d4e752f37383b628bc601a7ea7211496b4638f6514d0e5b9acc4939"
+            "url": "https://files.pythonhosted.org/packages/02/36/b8107b51adca73402ec1860d88f41d958e275e60eea6eeaa9c39ddb89a40/Naked-0.1.31-py2.py3-none-any.whl",
+            "sha256": "19de9961f4edb29e75cf837e8e031d6b52fbba4f0033515893d26f69c74b3b1f"
         },
         {
             "type": "file",
