@@ -25,7 +25,8 @@
       ],
       "post-install": [
         "mv /app/bin/moonplayer /app/bin/moonplayer-run",
-        "install -m755 moonplayer-script /app/bin/moonplayer"
+        "install -m755 moonplayer-script /app/bin/moonplayer",
+        "ln -s /usr/bin/python3 /app/bin/python"
       ],
       "sources": [
         {
