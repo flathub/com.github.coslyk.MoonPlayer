@@ -1,7 +1,7 @@
 {
   "app-id": "com.github.coslyk.MoonPlayer",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.13",
+  "runtime-version": "5.14",
   "sdk": "org.kde.Sdk",
   "command": "moonplayer",
   "finish-args": [
@@ -31,8 +31,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/v3.1.tar.gz",
-          "sha256": "8e16386efcd9ef7c832c6533acdbda43e12909552fafba9c8e37486da6456ff2"
+          "url": "https://github.com/coslyk/moonplayer/archive/v3.2.tar.gz",
+          "sha256": "e0a7a8adf46128f68055a1a34e7dcf1a2e61a2a04deede4f2b836f25bbb44f43"
         },
         {
           "type": "script",
@@ -103,8 +103,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz",
-                "sha256": "cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
+                "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
               }]
             },
             {
