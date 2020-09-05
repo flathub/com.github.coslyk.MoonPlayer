@@ -30,9 +30,9 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/coslyk/moonplayer/archive/v3.3.2.tar.gz",
-          "sha256": "6bdeca91542ab391396edc9c4608cd6b3e72a3f149fa3cc0afde2c70c508e276"
+          "type": "git",
+          "url": "https://github.com/coslyk/moonplayer.git",
+          "sha256": "v3.4"
         },
         {
           "type": "script",
@@ -41,8 +41,6 @@
         }
       ],
       "modules": [
-        "python3-crypto.json",
-        "python3-PySocks.json",
         {
           "name": "libmpv",
           "cleanup": [ "/include", "/lib/pkgconfig" ],
