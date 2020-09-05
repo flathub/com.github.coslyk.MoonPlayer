@@ -32,7 +32,7 @@
         {
           "type": "git",
           "url": "https://github.com/coslyk/moonplayer.git",
-          "sha256": "v3.4"
+          "tag": "v3.4"
         },
         {
           "type": "script",
