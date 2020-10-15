@@ -1,7 +1,7 @@
 {
   "app-id": "com.github.coslyk.MoonPlayer",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.14",
+  "runtime-version": "5.15",
   "sdk": "org.kde.Sdk",
   "command": "moonplayer",
   "finish-args": [
@@ -32,7 +32,7 @@
         {
           "type": "git",
           "url": "https://github.com/coslyk/moonplayer.git",
-          "tag": "v3.4"
+          "tag": "v3.5"
         },
         {
           "type": "script",
