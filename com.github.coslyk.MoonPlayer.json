@@ -65,16 +65,6 @@
           ],
           "modules": [
             {
-              "name": "libv4l2",
-              "cleanup": [ "/include", "/lib/*.la", "/lib/*/*.la", "/lib*/*/*/*.la", "/lib/pkgconfig", "/share/man" ],
-              "config-opts": [ "--disable-static", "--disable-qv4l2", "--disable-qvidcap", "--disable-bpf", "--with-udevdir=/app/lib/udev" ],
-              "sources": [{
-                "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.18.0.tar.bz2",
-                "sha256": "6cb60d822eeed20486a03cc23e0fc65956fbc1e85e0c1a7477f68bbd9802880d"
-              }]
-            },
-            {
               "name": "nv-codec-headers",
               "cleanup": ["*"],
               "no-autogen": true,
@@ -96,8 +86,7 @@
                 "--enable-openssl",
                 "--disable-doc",
                 "--disable-encoders",
-                "--enable-encoder=png",
-                "--enable-libv4l2"
+                "--enable-encoder=png"
               ],
               "sources": [{
                 "type": "archive",
