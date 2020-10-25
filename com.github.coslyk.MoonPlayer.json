@@ -32,7 +32,7 @@
         {
           "type": "git",
           "url": "https://github.com/coslyk/moonplayer.git",
-          "tag": "v3.5"
+          "tag": "v3.5.2"
         },
         {
           "type": "script",
@@ -127,6 +127,19 @@
             }
           ]
         }
+      ]
+    },
+    {
+      "name": "youtube-dl",
+      "sources": [{
+        "type": "file",
+        "url": "https://yt-dl.org/downloads/2020.09.20/youtube-dl",
+        "sha256": "b5660fa8441337c6b75448550bd6dcc7f97fe966b4ebb9bf47ff2b1cd4e3633a",
+        "dest-filename": "youtube-dl"
+      }],
+      "post-install": [
+        "chmod a+x youtube-dl",
+        "install youtube-dl /app/bin"
       ]
     }
   ]
