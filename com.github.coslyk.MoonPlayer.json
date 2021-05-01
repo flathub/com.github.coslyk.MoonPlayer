@@ -32,7 +32,7 @@
         {
           "type": "git",
           "url": "https://github.com/coslyk/moonplayer.git",
-          "tag": "v3.7"
+          "tag": "v3.8"
         },
         {
           "type": "script",
@@ -53,13 +53,13 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.33.0.tar.gz",
-              "sha256": "f1b9baf5dc2eeaf376597c28a6281facf6ed98ff3d567e3955c95bf2459520b4"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.33.1.tar.gz",
+              "sha256": "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9"
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.21",
-              "sha256": "7cebf2c5efe53cbb9a4b5bdc4b49ae90ecd64a8fce7a3222d58e591b58215306",
+              "url": "https://waf.io/waf-2.0.22",
+              "sha256": "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1",
               "dest-filename": "waf"
             }
           ],
@@ -73,8 +73,8 @@
                 {
                   "type": "git",
                   "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                  "tag": "n8.2.15.11",
-                  "commit": "58c159153814260c02c580716677bc4e823dfeff"
+                  "tag": "n11.0.10.1",
+                  "commit": "315ad740ac77282c7cea67ba31f2e4b373132919"
                 }
               ]
             },
@@ -91,8 +91,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz",
-                "sha256": "ad009240d46e307b4e03a213a0f49c11b650e445b1f8be0dda2a9212b34d2ffb"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
+                "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
               }]
             },
             {
