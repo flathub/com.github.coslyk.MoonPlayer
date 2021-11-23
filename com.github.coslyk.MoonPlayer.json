@@ -32,7 +32,7 @@
         {
           "type": "git",
           "url": "https://github.com/coslyk/moonplayer.git",
-          "tag": "v3.8"
+          "tag": "v3.9"
         },
         {
           "type": "script",
@@ -53,8 +53,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.33.1.tar.gz",
-              "sha256": "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.34.0.tar.gz",
+              "sha256": "f654fb6275e5178f57e055d20918d7d34e19949bc98ebbf4a7371902e88ce309"
             },
             {
               "type": "file",
@@ -73,8 +73,8 @@
                 {
                   "type": "git",
                   "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                  "tag": "n11.0.10.1",
-                  "commit": "315ad740ac77282c7cea67ba31f2e4b373132919"
+                  "tag": "n11.1.5.0",
+                  "commit": "b641a195edbe3ac9788e681e22c2e2fad8aacddb"
                 }
               ]
             },
@@ -91,8 +91,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
-                "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
+                "sha256": "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
               }]
             },
             {
@@ -101,8 +101,8 @@
               "config-opts": [ "--disable-static" ],
               "sources": [{
                 "type": "archive",
-                "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
-                "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833"
+                "url": "https://github.com/libass/libass/releases/download/0.15.2/libass-0.15.2.tar.xz",
+                "sha256": "1be2df9c4485a57d78bb18c0a8ed157bc87a5a8dd48c661961c625cb112832fd"
               }]
             },
             {
