@@ -1,7 +1,7 @@
 {
   "app-id": "com.github.coslyk.MoonPlayer",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15",
+  "runtime-version": "5.15-21.08",
   "sdk": "org.kde.Sdk",
   "command": "moonplayer",
   "finish-args": [
@@ -14,6 +14,8 @@
       "--filesystem=xdg-videos",
       "--filesystem=xdg-download",
       "--filesystem=xdg-pictures",
+      "--filesystem=xdg-run/gvfs",
+      "--filesystem=xdg-run/gvfsd",
       "--env=LC_NUMERIC=C"
   ],
   "modules": [
@@ -32,7 +34,7 @@
         {
           "type": "git",
           "url": "https://github.com/coslyk/moonplayer.git",
-          "tag": "v3.9.1"
+          "tag": "v4.0"
         },
         {
           "type": "script",
@@ -43,7 +45,16 @@
       "modules": [
         {
           "name": "libmpv",
-          "cleanup": [ "/include", "/lib/pkgconfig" ],
+          "cleanup": [
+            "/include",
+            "/lib/pkgconfig",
+            "/share/applications",
+            "/share/bash-completion",
+            "/share/doc",
+            "/share/icons",
+            "/share/man",
+            "/share/zsh"
+          ],
           "buildsystem": "simple",
           "build-commands": [
             "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa --disable-lua",
@@ -53,13 +64,13 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.34.0.tar.gz",
-              "sha256": "f654fb6275e5178f57e055d20918d7d34e19949bc98ebbf4a7371902e88ce309"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.34.1.tar.gz",
+              "sha256": "32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746"
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.22",
-              "sha256": "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1",
+              "url": "https://waf.io/waf-2.0.23",
+              "sha256": "28a2e4583314a162cfcbffefb8a9202c1d7869040d30b5852da479b76d9c0491",
               "dest-filename": "waf"
             }
           ],
@@ -73,8 +84,8 @@
                 {
                   "type": "git",
                   "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                  "tag": "n11.1.5.0",
-                  "commit": "b641a195edbe3ac9788e681e22c2e2fad8aacddb"
+                  "tag": "n11.1.5.1",
+                  "commit": "84483da70d903239d4536763fde8c7e6c4e80784"
                 }
               ]
             },
@@ -84,15 +95,15 @@
               "config-opts": [
                 "--enable-shared",
                 "--disable-static",
-                "--enable-openssl",
+                "--enable-gnutls",
                 "--disable-doc",
                 "--disable-encoders",
                 "--enable-encoder=png"
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
-                "sha256": "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
+                "url": "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz",
+                "sha256": "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
               }]
             },
             {
